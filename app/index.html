@@ -16,24 +16,24 @@
             body {
                 width: 100%;
                 margin: 0;
-                padding: 10px;
+                padding: 0px;
             }
             
             .alert-card {
                 padding: 16px;
                 width: 100%;
-                box-shadow: 0 4px 6px rgb(129 146 161 / 20%);
-                border-radius: 2px !important;
                 background: #fff;
-                border-left: 4px solid #b0d0ff;
             }
-            /* .alert > .row > div {
+            .alert > .row > div {
                 display: flex;
-            } */
-            /* .icon-area {
-                width: 5%;
-                min-width: 50px;
-            } */
+            }
+            .icon-area {
+                width: 50px;
+            }
+            .text-area {
+                min-width: 100px;
+                max-width: 90%;
+            }
             .text-area #text {
                 margin-bottom: 0;
                 line-height: 16px;
@@ -46,17 +46,11 @@
                 cursor: pointer;
                 color: #323232;
             }
-            .danger {
-                border-left: 4px solid var(--danger) !important;
-            }
             .danger i.icon-danger {
                 display: var(--fa-display,inline-block) !important;
             }
             .icon-danger.fa-solid {
                 color: var(--danger) !important;
-            }
-            .warn {
-                border-left: 4px solid var(--warn) !important;
             }
             .warn i.icon-warn {
                 display: var(--fa-display,inline-block) !important;
