@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            :root {
+                --warn: #ffb700;
+                --danger: #df4953;
+            }
+
+            body {
+                width: 100%;
+                margin: 0;
+                padding: 10px;
+            }
+            
+            .alert-card {
+                padding: 16px;
+                width: 100%;
+                box-shadow: 0 4px 6px rgb(129 146 161 / 20%);
+                border-radius: 2px !important;
+                background: #fff;
+                border-left: 4px solid #b0d0ff;
+            }
+            /* .alert > .row > div {
+                display: flex;
+            } */
+            /* .icon-area {
+                width: 5%;
+                min-width: 50px;
+            } */
+            .text-area #text {
+                margin-bottom: 0;
+                line-height: 16px;
+                font-size: 14px; 
+            }
+            .text-area h4 {
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 20px;
+                cursor: pointer;
+                color: #323232;
+            }
+            .danger {
+                border-left: 4px solid var(--danger) !important;
+            }
+            .danger i.icon-danger {
+                display: var(--fa-display,inline-block) !important;
+            }
+            .icon-danger.fa-solid {
+                color: var(--danger) !important;
+            }
+            .warn {
+                border-left: 4px solid var(--warn) !important;
+            }
+            .warn i.icon-warn {
+                display: var(--fa-display,inline-block) !important;
+            }
+            .icon-warn.fa-solid {
+                color: var(--warn) !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alert-card danger">
+            <div class="row">
+                <div class="col-1 icon-area text-center">
+                    <i class="icon-danger fa-solid fa-2x d-none fa-circle-exclamation"></i>
+                    <i class="icon-warn fa-solid fa-2x d-none fa-circle-exclamation"></i>
+                </div>
+                <div class="col-11 text-area">
+                    <h4 id="header">Внимание</h4>
+                    <div id="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem a, esse cupiditate aliquam placeat perferendis obcaecati eum iste facere ipsum ipsa repellendus optio est qui blanditiis, sunt magni animi?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
