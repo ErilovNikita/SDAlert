@@ -11,18 +11,20 @@
             :root {
                 --warn: #ffb700;
                 --danger: #df4953;
+                --text-color: #323232;
             }
 
             body {
                 width: 100%;
                 margin: 0;
                 padding: 0px;
+                background-color: transparent;
             }
             
             .alert-card {
                 padding: 16px;
                 width: 100%;
-                background: #fff;
+                background: transparent;
             }
 
             .alert > .row > div { display: flex; }
@@ -37,6 +39,7 @@
                 margin-bottom: 0;
                 line-height: 16px;
                 font-size: 14px; 
+                color: var(--text-color) !important;
             }
 
             #text * { border: none !important; }
@@ -45,8 +48,7 @@
                 font-size: 17px;
                 font-weight: 600;
                 line-height: 20px;
-                cursor: pointer;
-                color: #323232;
+                color: var(--text-color) !important;
             }
 
             .danger i.icon-danger { display: var(--fa-display,inline-block) !important; }
