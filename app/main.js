@@ -1,7 +1,10 @@
 let manifest = {
-    name : "ServiceDesk SDAlert",
-    version : "1.0.0"
+    name : "SDAlert",
+    version : "1.0.0",
+    author: "Erilov Nikita"
 }
+
+console.log(`%c${manifest.name} App     \n%cby ${manifest.author}`, 'background: #ffb700; color: #df4953', 'background: #fff; color: #333');
 
 window.parent.injectJsApi(window.parent, window);
 
