@@ -24,21 +24,23 @@
                 width: 100%;
                 background: #fff;
             }
-            .alert > .row > div {
-                display: flex;
-            }
-            .icon-area {
-                width: 50px;
-            }
+
+            .alert > .row > div { display: flex; }
+            .icon-area { width: 50px; }
+
             .text-area {
                 min-width: 100px;
                 max-width: 90%;
             }
+
             .text-area #text {
                 margin-bottom: 0;
                 line-height: 16px;
                 font-size: 14px; 
             }
+
+            #text * { border: none !important; }
+
             .text-area h4 {
                 font-size: 17px;
                 font-weight: 600;
@@ -46,18 +48,11 @@
                 cursor: pointer;
                 color: #323232;
             }
-            .danger i.icon-danger {
-                display: var(--fa-display,inline-block) !important;
-            }
-            .icon-danger.fa-solid {
-                color: var(--danger) !important;
-            }
-            .warn i.icon-warn {
-                display: var(--fa-display,inline-block) !important;
-            }
-            .icon-warn.fa-solid {
-                color: var(--warn) !important;
-            }
+
+            .danger i.icon-danger { display: var(--fa-display,inline-block) !important; }
+            .icon-danger.fa-solid { color: var(--danger) !important; }
+            .warn i.icon-warn { display: var(--fa-display,inline-block) !important; }
+            .icon-warn.fa-solid { color: var(--warn) !important; }
         </style>
     </head>
     <body>
@@ -68,12 +63,11 @@
                     <i class="icon-warn fa-solid fa-2x d-none fa-circle-exclamation"></i>
                 </div>
                 <div class="col-11 text-area">
-                    <h4 id="header">Внимание</h4>
-                    <div id="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem a, esse cupiditate aliquam placeat perferendis obcaecati eum iste facere ipsum ipsa repellendus optio est qui blanditiis, sunt magni animi?
-                    </div>
+                    <h4 id="header"></h4>
+                    <div id="text"></div>
                 </div>
             </div>
         </div>
+        <script src="main.js"></script>
     </body>
 </html>

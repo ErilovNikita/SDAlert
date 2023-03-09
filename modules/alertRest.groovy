@@ -1,15 +1,18 @@
+import groovy.json.JsonBuilder
+
 /**
 * Метод для получения данных алерта *
-* @return Мапа со всеми данными *
+* @return JSON со всеми данными *
 */
-Map getAlert() {
+String getAlert() {
   def alertObject = utils.get('catalogs$50353202') 
-  return [
-    'active' : alertObject?.isActive,
-    'deadline' : alertObject?.datatime,
-    'content' : [
-        'header' : 'Внимание',
-        'text' : alertObject?.description
+  Map data = [
+    'active'    : alertObject?.isActive as Boolean,
+    'deadline'  : alertObject?.datatime as Date,
+    'content'   : [
+        'header'  : 'Внимание',
+        'text'    : alertObject?.description as String
     ]
   ]
+  return new JsonBuilder(data).toPrettyString()
 }

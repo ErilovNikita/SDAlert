@@ -5,14 +5,9 @@ let manifest = {
 
 window.parent.injectJsApi(window.parent, window);
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementsByClassName('app-name')[0].innerHTML = manifest.name
-    document.getElementsByClassName('app-version')[0].innerHTML = "v" + manifest.version
-});
-
-function renderAlert(
-    type,
-    text
-) {
-    
-}
+jsApi.restCallAsJson("exec/?func=modules.alert.getAlert&params").then((data) => {
+    if (data.active) {
+        document.getElementById('header').innerHTML = data.content.header
+        document.getElementById('text').innerHTML = data.content.text
+    }
+})
