@@ -10,6 +10,12 @@ window.parent.injectJsApi(window.parent, window);
 
 jsApi.restCallAsJson("exec/?func=modules.alert.getAlert&params").then((data) => {
     if (data.active) {
+
+        if ( data.type && data.type in ['danger', 'warn', 'info']) {
+            document.getElementsByClassName('alert-card')[0].classList.remove('info')
+            document.getElementsByClassName('alert-card')[0].classList.add( data.type )
+        }
+
         document.getElementById('header').innerHTML = data.content.header
         document.getElementById('text').innerHTML = data.content.text
     }

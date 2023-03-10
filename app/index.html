@@ -11,6 +11,7 @@
             :root {
                 --warn: #ffb700;
                 --danger: #df4953;
+                --info: #4999df;
                 --text-color: #323232;
             }
 
@@ -25,6 +26,7 @@
                 padding: 16px;
                 width: 100%;
                 background: transparent;
+                overflow-y: scroll;
             }
 
             .alert > .row > div { display: flex; }
@@ -53,20 +55,29 @@
 
             .danger i.icon-danger { display: var(--fa-display,inline-block) !important; }
             .icon-danger.fa-solid { color: var(--danger) !important; }
+            
             .warn i.icon-warn { display: var(--fa-display,inline-block) !important; }
             .icon-warn.fa-solid { color: var(--warn) !important; }
+
+            .info i.icon-info { display: var(--fa-info,inline-block) !important; }
+            .icon-info.fa-solid { color: var(--info) !important; }
         </style>
     </head>
     <body>
-        <div class="alert-card danger">
+        <div class="alert-card info">
             <div class="row">
                 <div class="col-1 icon-area text-center">
                     <i class="icon-danger fa-solid fa-2x d-none fa-circle-exclamation"></i>
-                    <i class="icon-warn fa-solid fa-2x d-none fa-circle-exclamation"></i>
+                    <i class="icon-warn fa-solid fa-2x d-none fa-triangle-exclamation"></i>
+                    <i class="icon-info fa-solid fa-2x d-none fa-duotone fa-circle-info"></i>
                 </div>
                 <div class="col-11 text-area">
-                    <h4 id="header"></h4>
-                    <div id="text"></div>
+                    <h4 id="header">
+                        Внимание
+                    </h4>
+                    <div id="text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, accusantium repudiandae esse qui distinctio, consectetur quasi vel eaque non eum facere reiciendis fugit? Dolores amet facere minima, maiores eaque perferendis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem praesentium magni deleniti, temporibus minima esse voluptatem quos adipisci suscipit. Commodi tempore aliquam, sint id quisquam doloribus non. Molestias, autem illum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, alias odio perspiciatis voluptates totam, facere molestias asperiores exercitationem rerum eligendi nulla repellendus magni aperiam sapiente! Harum perspiciatis quidem magni quibusdam?
+                    </div>
                 </div>
             </div>
         </div>
