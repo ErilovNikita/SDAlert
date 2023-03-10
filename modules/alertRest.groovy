@@ -10,6 +10,7 @@ String getAlert() {
     'active'    : alertObject?.isActive as Boolean,
     'deadline'  : alertObject?.datatime as Date,
     'content'   : [
+        'type'    : alertObject?.type?.code as String,
         'header'  : 'Внимание',
         'text'    : alertObject?.description as String
     ]
