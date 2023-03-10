@@ -7,10 +7,9 @@ import groovy.json.JsonBuilder
 String getAlert() {
   def alertObject = utils.get('catalogs$50353202') 
   Map data = [
-    'active'    : alertObject?.isActive?.code == 'yes' as Boolean,
+    'active'    : alertObject?.isActive as Boolean,
     'deadline'  : alertObject?.datatime as Date,
     'content'   : [
-        'type'    : alertObject?.type?.code as String,
         'header'  : 'Внимание',
         'text'    : alertObject?.description as String
     ]
