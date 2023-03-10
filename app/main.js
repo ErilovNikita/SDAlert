@@ -9,11 +9,12 @@ console.log(`%c${manifest.name} App     \n%cby ${manifest.author}`, 'background:
 window.parent.injectJsApi(window.parent, window);
 
 jsApi.restCallAsJson("exec/?func=modules.alert.getAlert&params").then((data) => {
+    console.log(data)
     if (data.active) {
 
-        if ( data.type && data.type in ['danger', 'warn', 'info']) {
+        if ( data.content.type && ['danger', 'warn', 'info'].includes( data.content.type ) ) {
             document.getElementsByClassName('alert-card')[0].classList.remove('info')
-            document.getElementsByClassName('alert-card')[0].classList.add( data.type )
+            document.getElementsByClassName('alert-card')[0].classList.add( data.content.type )
         }
 
         document.getElementById('header').innerHTML = data.content.header
