@@ -1,6 +1,6 @@
 let manifest = {
     name : "SDAlert",
-    version : "1.1.0",
+    version : "1.5.1",
     author: "Erilov Nikita"
 }
 

@@ -8,7 +8,7 @@ package ru.ocs.alert
  * Содержит методы, которые формируют уникальные структурированные данные *
  * @author Erilov.NA*
  * @since 2023-03-14 *
- * @version 2.0.0 *
+ * @version 2.0.1 *
 */
 
 /* Зависимости */
@@ -81,7 +81,7 @@ class Alert {
         // Вернем собранный обьекта класса
         return Alert.builder()
             .uuid(		storageObject?.UUID as String )
-            .active(	storageObject?.isActive?.code == 'yes' as Boolean )
+            .active(	storageObject?.isActive?.code == 'yes' )
             .deadline(	storageObject?.datatime as Date )
             .type(		AlertType[ storageObject?.type?.code as String ] )
             .header(	'Внимание' as String )
